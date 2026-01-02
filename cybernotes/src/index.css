@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-dark: #0a0e27;
+  --color-cyber-darker: #050816;
+  --color-cyber-primary: #00d9ff;
+  --color-cyber-secondary: #7b2cbf;
+  --color-cyber-accent: #ff006e;
+  --color-cyber-success: #06ffa5;
+  --color-cyber-warning: #ffb703;
+  --color-cyber-danger: #ef476f;
+}
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d9ff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b8d4;
+}
+
+/* Markdown styles */
+.markdown-content h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #00d9ff;
+}
+
+.markdown-content h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #00d9ff;
+}
+
+.markdown-content h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+}
+
+.markdown-content p {
+  margin-bottom: 0.75rem;
+  color: #d1d5db;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 0.75rem;
+  color: #d1d5db;
+}
+
+.markdown-content ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 0.75rem;
+  color: #d1d5db;
+}
+
+.markdown-content code {
+  background-color: #050816;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #06ffa5;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.markdown-content pre {
+  background-color: #050816;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #00d9ff;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}

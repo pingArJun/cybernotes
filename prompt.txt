@@ -1,0 +1,165 @@
+# Prompt for Building CyberNotes System
+
+Here's the exact prompt you should give me when you're ready to build:
+
+---
+
+**PROMPT:**
+
+```
+Build me a localhost cybersecurity knowledge management web application called "CyberNotes" with these requirements:
+
+CORE FEATURES:
+1. Project Management - organize by type (Malware Analysis, Bug Bounty, CTF, Research, Course, Custom)
+2. Quick Capture - fast note taking during active work
+3. Commands Library - store commands with outputs, ONE-CLICK COPY buttons for every command
+4. Walkthroughs - step-by-step writeups with markdown support
+5. Resources - manage courses, tools, documentation links with progress tracking
+6. Files - upload and store screenshots, scripts, pcaps (base64 storage)
+7. Templates - pre-built templates for CTF writeups, bug reports, malware analysis
+8. Checklists - methodology checklists with nested items
+9. Tags System - organize everything with tags
+10. Search - full-text search across all content
+11. Version History - track changes to notes and walkthroughs
+12. Export/Backup - export individual projects or full backup as JSON
+
+TECHNICAL REQUIREMENTS:
+- React application with Tailwind CSS
+- Use persistent storage (window.storage API) for all data
+- Dark theme with modern cybersecurity aesthetic
+- Sidebar navigation with all main sections
+- Each command MUST have a prominent copy button
+- File upload with drag & drop support
+- Markdown editor for notes and walkthroughs
+- Search with filters (by project, type, date, tags)
+- Responsive design, collapsible sidebar
+
+UI STRUCTURE:
+- Header: Logo, global search, quick actions
+- Sidebar: Dashboard, Quick Capture, Projects, Commands, Walkthroughs, Templates, Resources, Checklists, Tags, Search, Settings
+- Main content area that changes based on selection
+
+DATA MODELS:
+- Projects: id, name, type, status, description, tags, dates, stats
+- Notes: id, project_id, title, content, type, tags, dates
+- Commands: id, project_id, command_text, output_text, tool, purpose, success, tags, dates
+- Resources: id, title, url, type, category, tags, progress, dates
+- Files: id, project_id, filename, file_data (base64), file_type, size, dates
+- Templates: id, name, template_type, content, variables
+- Checklists: id, name, category, items (with nested structure)
+- Tags: id, name, category
+
+KEY INTERACTIONS:
+1. Quick Capture: Fast form to create notes/commands on the fly
+2. Commands: Grid/list view with copy buttons, filter by tool/tag, click to see full details
+3. Projects: Create new project, view all associated notes/commands/files
+4. Walkthroughs: Rich markdown editor with command insertion from library
+5. Search: Filter by multiple criteria, show results from all content types
+
+START WITH:
+Phase 1 - Build the core structure:
+- Basic layout (header, sidebar, main content)
+- Storage initialization
+- Projects CRUD (create, read, update, delete)
+- Quick Capture functionality
+- Commands library with COPY buttons
+- Basic search
+
+Make it functional and polished. Use modern UI with good UX. Every command must be easily copyable with one click.
+```
+
+---
+
+## **FOLLOW-UP PROMPTS** (Use these after Phase 1 is done):
+
+### **After Phase 1:**
+```
+Add the following features to CyberNotes:
+- Detailed Notes editor with markdown support
+- Walkthroughs section with step-by-step editor
+- Templates system with pre-built CTF, Bug Bounty, and Malware Analysis templates
+- File upload and storage system with preview for images
+- Ability to insert commands from library into walkthroughs
+```
+
+### **After Phase 2:**
+```
+Add these advanced features to CyberNotes:
+- Resources management (courses, tools, docs) with progress tracking
+- Checklists system with nested checkboxes
+- Advanced search with multiple filters
+- Tags management with auto-suggestions
+- Export functionality (individual projects and full backup as JSON)
+```
+
+### **After Phase 3:**
+```
+Add final polish to CyberNotes:
+- Version history for notes and walkthroughs
+- Settings page (theme, defaults, storage info)
+- Dashboard with recent activity and stats
+- Keyboard shortcuts (Ctrl+K for search, Ctrl+N for new note, etc.)
+- Import backup functionality
+- Help/documentation section
+```
+
+---
+
+## **TIPS FOR WORKING WITH ME:**
+
+1. **Be specific about bugs**: If something doesn't work, tell me exactly what's broken with error messages
+
+2. **Iterate in phases**: Don't ask for everything at once. Build core → test → add features → test
+
+3. **Request changes clearly**: 
+   - "Make the copy button bigger and green"
+   - "Add a confirmation dialog before deleting projects"
+   - "The search isn't finding commands, fix it"
+
+4. **Test as you go**: After each phase, test the features and report issues
+
+5. **Ask for explanations**: If you want to understand how something works, just ask
+
+6. **Request specific features**: 
+   - "Add a 'duplicate command' button"
+   - "Make the sidebar resizable"
+   - "Add syntax highlighting for Python code"
+
+---
+
+## **EXAMPLE CONVERSATION FLOW:**
+
+**You**: [Give initial prompt above]
+
+**Me**: [Builds Phase 1 with basic structure, projects, commands, copy buttons]
+
+**You**: "This looks good but the copy button needs to show a confirmation when clicked, and I want to filter commands by 'success' status"
+
+**Me**: [Updates the copy button with confirmation toast, adds success filter]
+
+**You**: "Perfect. Now add the walkthroughs feature with markdown editor and ability to insert commands"
+
+**Me**: [Adds walkthrough editor with command insertion]
+
+**You**: "The command insertion modal should be searchable and show which project each command belongs to"
+
+**Me**: [Updates the command insertion feature]
+
+---
+
+## **WHAT TO EXPECT:**
+
+- I'll build this as a **single-file React artifact** initially
+- You'll be able to see and use it immediately in the browser
+- All data will be stored locally using the persistent storage API
+- The app will work completely offline
+- You can export your data as JSON backup anytime
+- If the artifact gets too large, I might split it into multiple iterations
+
+---
+
+## **READY?**
+
+When you want to start building, just paste the main prompt above, and I'll create the first working version. Then we'll iterate from there based on what you need adjusted or added.
+
+Want to start now or do you have more questions about the plan?
